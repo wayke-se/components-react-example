@@ -12,6 +12,14 @@ Some things to note:
 
 * nodejs + npm
 
+Create a .env file in root
+```
+WAYKE_SEARCH_URL=https://test-ext-api.wayketech.se/vehicles
+WAYKE_SEARCH_X_API_KEY=YOUR_API_KEY
+WAYKE_GRAPH_QL_URL=https://gql.wayketech.se/query
+WAYKE_ECOM_URL=https://ecom.wayketech.se
+GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+```
 
 ## Build
 
