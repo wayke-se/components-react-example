@@ -1,6 +1,6 @@
 # Introduction
 
-This is an example application that shows how to add the [@wayke-se/components-react](https://github.com/wayke-se/components-react) component to a non-react application.
+> This is an example application that shows how to add the [@wayke-se/components-react](https://github.com/wayke-se/components-react) component to a non-react application.
 
 **Some things to note:**
 
