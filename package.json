@@ -6,8 +6,11 @@
   "author": "Ourstudio",
   "license": "ISC",
   "scripts": {
-    "build-js": "webpack --config webpack.javascript.js --progress --profile --colors --bail --mode production",
-    "build-ts": "webpack --config webpack.typescript.js --progress --profile --colors --bail --mode production"
+    "build:js": "webpack --config webpack.javascript.js --progress --profile --colors --bail --mode production",
+    "build:ts": "webpack --config webpack.typescript.js --progress --profile --colors --bail --mode production",
+    "start:js": "webpack-dev-server --config webpack.server.javascript.js --progress --profile --colors --mode development",
+    "start:ts": "webpack-dev-server --config webpack.server.typescript.js --progress --profile --colors --mode development",
+    "start": "http-server ./build -p 5000"
   },
   "dependencies": {
     "@wayke-se/components-react": "^1.0.0",
@@ -29,10 +32,16 @@
     "css-loader": "^3.6.0",
     "dotenv": "^8.2.0",
     "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "http-server": "^0.12.3",
+    "install": "^0.13.0",
+    "npm": "^6.14.5",
     "style-loader": "^1.2.1",
     "ts-loader": "^7.0.5",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   }
 }

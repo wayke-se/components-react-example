@@ -7,6 +7,8 @@ import "whatwg-fetch";
 import React from "react";
 import ReactDOM from "react-dom";
 
+import './theme.css'
+
 import WaykeComposite from "@wayke-se/components-react";
 
 const settings = {

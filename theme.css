@@ -1,20 +1,3 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /*
   Theme Setting
   This file contains theme settings.

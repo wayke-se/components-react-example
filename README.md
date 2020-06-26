@@ -6,7 +6,8 @@ Some things to note:
 
 * Adding the entire React framework will be heavy and affect the loading time of the non-react website
 * Make sure to configure the webpack build step according to your own requirements, so that the final build is production ready (i.e. we don't take responsibility of that)
-
+* In this example the project is bundled with Webpack, however you can use other bundler like Rollup or Parcel
+* `theme.css` is not referenced inside `index.html` because it's imported inside index.(js/ts) and bundled up with the javascript. 
 
 ## Prerequisites
 
@@ -30,16 +31,18 @@ The result is in the `build` folder.
 
 
 ## Usage
+Start serving the files from the `build` folder on localhost:5000
+```bash
+npm start
+```
 
-You can now open the `example.html` file and test the WaykeComposite component.
-In the html-file you can then see how you should implement the component on your own site.
-
-Note: I order for this to work one needs to update the `settings` variable with correct information.
+## Development
+For development purpose one can use `npm run start:js` or `npm run start:ts`.
+This will start the build process in watch mode with HRM (Hot Module Replacement)
 
 
 ## Resources
 
-Consider the following repositories for more information:
+Consider the following repository for more information:
 
-* https://github.com/wayke-se/components-react
 * https://github.com/wayke-se/components-react

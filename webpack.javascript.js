@@ -1,5 +1,6 @@
 require('dotenv').config();
 const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -17,6 +18,9 @@ module.exports = {
     modules: ["node_modules"],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+    }),
     new webpack.DefinePlugin({
       "process.env": {
         WAYKE_SEARCH_URL: `"${process.env.WAYKE_SEARCH_URL}"`,
