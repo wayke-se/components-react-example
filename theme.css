@@ -22,23 +22,10 @@
   color: #fff;
 }
 
-/*
-  - Primary (color)
-  Used to add primary color to text. Make sure to add the same color as
-  in the background-color selector above.
-*/
 .wayke__theme.wayke__color--primary-text {
   color: #ff5a1c;
 }
 
-/*** Font ***/
-
-/*
-  - Regular
-  This is the regular font used on most text elements. It is recommended
-  to use a light (font-weight: 300) or regular (font-weight: 400) font
-  for this type.
-*/
 .wayke__theme.wayke__font--regular {
   font-family: sans-serif;
   font-weight: 300;
@@ -47,11 +34,6 @@
   letter-spacing: 0.02em;
 }
 
-/*
-  - Bold
-  This font will be applied to headings and some other elements using
-  the same styling.
-*/
 .wayke__theme.wayke__font--bold {
   font-family: sans-serif;
   font-weight: 700;
