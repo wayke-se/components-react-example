@@ -7,19 +7,21 @@ import "whatwg-fetch";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import './theme.css'
+import "./theme.css";
 
-import WaykeComposite from "@wayke-se/components-react";
+import WaykeComposite, { WaykePubSub } from "@wayke-se/components-react";
+
+WaykePubSub.subscribe({ eventName: "All", callback: console.log });
 
 const settings = {
   provider: {
-    graphQlUrl: "https://gql.wayketech.se/query",
-    url: "https://test-ext-api.wayketech.se/vehicles",
-    apiKey: "YOUR_API_KEY",
+    graphQlUrl: process.env.WAYKE_GRAPH_QL_URL,
+    url: process.env.WAYKE_SEARCH_URL,
+    apiKey: process.env.WAYKE_SEARCH_X_API_KEY,
     ecomSettings: {
-      url: "OPTIONAL_ECOM_URL",
+      url: process.env.WAYKE_ECOM_URL,
     },
-    googleMapsApiKey: "OPTIONAL_GOOGLE_MAPS_API_KEY",
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   },
 };
 

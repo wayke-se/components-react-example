@@ -7,12 +7,14 @@ import "whatwg-fetch";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import './theme.css'
+import "./theme.css";
 
-import WaykeComposite from "@wayke-se/components-react";
+import WaykeComposite, { WaykePubSub } from "@wayke-se/components-react";
+
+WaykePubSub.subscribe({ eventName: "All", callback: console.log });
 
 const settings = {
-  provider={
+  provider: {
     graphQlUrl: process.env.WAYKE_GRAPH_QL_URL,
     url: process.env.WAYKE_SEARCH_URL,
     apiKey: process.env.WAYKE_SEARCH_X_API_KEY,
@@ -20,7 +22,7 @@ const settings = {
       url: process.env.WAYKE_ECOM_URL,
     },
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
-  }
+  },
 };
 
 ReactDOM.render(
