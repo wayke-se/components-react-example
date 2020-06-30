@@ -19,6 +19,7 @@ const settings = {
     url: process.env.WAYKE_SEARCH_URL,
     ecomSettings: {
       url: process.env.WAYKE_ECOM_URL,
+      useBankId: true,
     },
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
   },
