@@ -17,7 +17,6 @@ const settings = {
   provider: {
     graphQlUrl: process.env.WAYKE_GRAPH_QL_URL,
     url: process.env.WAYKE_SEARCH_URL,
-    apiKey: process.env.WAYKE_SEARCH_X_API_KEY,
     ecomSettings: {
       url: process.env.WAYKE_ECOM_URL,
     },

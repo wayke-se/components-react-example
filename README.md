@@ -16,12 +16,19 @@
 
 Create an `.env` file in root and add the following information:
 ```
+WAYKE_HOST=YOUR_HOST
 WAYKE_SEARCH_URL=https://test-ext-api.wayketech.se/vehicles
-WAYKE_SEARCH_X_API_KEY=YOUR_API_KEY
+WAYKE_SEARCH_X_API_KEY=OPTIONAL_YOUR_API_KEY
 WAYKE_GRAPH_QL_URL=https://gql.wayketech.se/query
 WAYKE_ECOM_URL=https://ecom.wayketech.se
 GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
 ```
+
+`WAYKE_HOST` can be used instead of using and exposing the `WAYKE_SEARCH_X_API_KEY`. If, for example, your development host is `test.com.localhost`
+Update your local host file and add:
+127.0.0.1   test.com.localhost
+This will change the origin, while still pointing to localhost.
+Start the example and open `test.com.localhost:5000`.
 
 ## Build
 
