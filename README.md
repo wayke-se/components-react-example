@@ -39,7 +39,7 @@ WAYKE_HOST=a.com.localhost,b.com.localhost
 ## Build
 
 * In the root dir, run `npm install`
-* Then run `npm run build:js` to build the javascript example or type `npm run build-:s` to build the typescript example
+* Then run `npm run build:js` to build the javascript example or type `npm run build:ts` to build the typescript example
 
 The result is in the `build` folder.
 
