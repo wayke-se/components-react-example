@@ -10,11 +10,11 @@ import ReactDOM from "react-dom";
 import "./theme.css";
 import "./ecom.css"; // Optional Ecom CSS for custom styling
 
-import WaykeComposite, { WaykePubSub } from "@wayke-se/components-react";
+import WaykeComposite, { WaykePubSub, WaykeCompositeWithProviderProps } from "@wayke-se/components-react";
 
 WaykePubSub.subscribe({ eventName: "All", callback: console.log });
 
-const settings = {
+const settings: WaykeCompositeWithProviderProps = {
   provider: {
     graphQlUrl: process.env.WAYKE_GRAPH_QL_URL,
     url: process.env.WAYKE_SEARCH_URL,
@@ -24,6 +24,7 @@ const settings = {
       serviceLogotypeUrl: "https://cdn.wayke.se/wui/images/ecom/wayke-logo.svg",
     },
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+    useQueryParamsFromUrl: true,
   },
 };
 
