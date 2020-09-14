@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Wayke - Components React Example</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      .demo-header {
+        padding: 24px;
+        background-color: #ff5a1c;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase; 
+      }
+
+      .demo-footer {
+        padding: 72px 24px;
+        background-color: #ebebeb;
+        color: #757575;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    </style>
   </head>
-
   <body>
-    <div>
-      <h1>Here is a header</h1>
-      <p>Welcome to the Wayke components site</p>
-
-      <div id="react-components" class="wayke__theme wayke__font--regular"></div>
-      <h2>Here is a footer</h2>
-    </div>
+    <header class="demo-header">Your own header</header>
+    <div id="react-components" class="wayke__theme wayke__font--regular"></div>
+    <footer class="demo-footer">Your own footer</footer>
   </body>
 </html>
