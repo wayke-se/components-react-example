@@ -24,6 +24,7 @@ const settings = {
       serviceLogotypeUrl: "https://cdn.wayke.se/wui/images/ecom/wayke-logo.svg",
     },
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+    googleMapsMarker: 'https://www.wayke.se/images/map/marker.png',
     useQueryParamsFromUrl: true,
   },
 };
