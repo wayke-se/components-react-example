@@ -13,7 +13,7 @@
     "start": "http-server ./build -p 5000"
   },
   "dependencies": {
-    "@wayke-se/components-react": "^1.1.17",
+    "@wayke-se/components-react": "^1.1.18",
     "core-js": "^3.6.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
