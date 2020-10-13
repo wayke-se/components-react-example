@@ -15,6 +15,9 @@ import WaykeComposite, { WaykePubSub, WaykeCompositeWithProviderProps } from "@w
 WaykePubSub.subscribe({ eventName: "All", callback: console.log });
 
 const settings: WaykeCompositeWithProviderProps = {
+  composite: {
+    placeholderImage: 'https://miro.medium.com/max/3000/1*MI686k5sDQrISBM6L8pf5A.jpeg'
+  },
   provider: {
     graphQlUrl: process.env.WAYKE_GRAPH_QL_URL,
     url: process.env.WAYKE_SEARCH_URL,
