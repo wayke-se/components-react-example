@@ -18,6 +18,7 @@ const settings = {
   provider: {
     graphQlUrl: process.env.WAYKE_GRAPH_QL_URL,
     url: process.env.WAYKE_SEARCH_URL,
+    urlMlt: process.env.WAYKE_SEARCH_MLT_URL,
     ecomSettings: {
       url: process.env.WAYKE_ECOM_URL,
       useBankId: true,
