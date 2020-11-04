@@ -51,8 +51,28 @@ npm start
 ```
 
 ## Development
-For development purpose one can use `npm run start:js` or `npm run start:ts`.
+For development purpose one can use one of the following samples below.
 This will start the build process in watch mode with HRM (Hot Module Replacement)
+
+1. Example showing the `WaykeComponent`(main component), javascript.
+```bash
+npm run start:js
+```
+
+2. Example showing the `WaykeComponent`(main component), typescript.
+```bash
+npm run start:ts
+```
+
+3. Example showing the `WaykeComponentPath`, javascript.
+```bash
+npm run start-path:js
+```
+
+4. Example showing the `WaykeComponentPath`, typescript.
+```bash
+npm run start-path:ts
+```
 
 
 ## Resources
