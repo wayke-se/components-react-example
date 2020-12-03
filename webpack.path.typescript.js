@@ -11,7 +11,6 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "build"),
-    publicPath: '/example/build/',
     filename: "[name].bundle.js",
   },
   resolve: {
@@ -50,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.js$/,
