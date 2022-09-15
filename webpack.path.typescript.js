@@ -37,10 +37,26 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.m?js$/,
+        exclude: /node_modules\/(?!(([^\/]+?\/){1,2}(src|es6)))/,
         use: [
           {
+            loader: "babel-loader",
+          },
+        ],
+      },
+      {
+        test: /\.ts(x?)$/,
+        use: [
+          {
+            loader: "babel-loader",
+          },
+          {
             loader: "ts-loader",
+            options: {
+              transpileOnly: true,
+              allowTsInNodeModules: true,
+            },
           },
         ],
       },
@@ -51,27 +67,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules[\/|\\]core-js/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    useBuiltIns: "entry",
-                    corejs: 3,
-                  },
-                ],
-                ["@babel/preset-react"],
-              ],
-            },
-          },
-        ],
       },
     ],
   },

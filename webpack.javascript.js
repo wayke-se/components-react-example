@@ -36,33 +36,26 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.m?js$/,
+        exclude: /node_modules\/(?!(([^\/]+?\/){1,2}(src|es6)))/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                ["@babel/preset-react"],
+              ],
+            },
+          },
+        ],
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|jpg|woff|woff2|svg|eot|ttf|gif|svg)$/,
         type: 'asset/resource',
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules[\/|\\]core-js/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    useBuiltIns: "entry",
-                    corejs: 3,
-                  },
-                ],
-                ["@babel/preset-react"],
-              ],
-            },
-          },
-        ],
       },
     ],
   },

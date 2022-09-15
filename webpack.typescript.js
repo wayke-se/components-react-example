@@ -1,7 +1,7 @@
-require('dotenv').config();
+require("dotenv").config();
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   devtool: "source-map",
@@ -19,7 +19,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: "./index.html",
     }),
     new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /sv/),
     new webpack.DefinePlugin({
@@ -36,41 +36,36 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.m?js$/,
+        exclude: /node_modules\/(?!(([^\/]+?\/){1,2}(src|es6)))/,
         use: [
           {
+            loader: "babel-loader",
+          },
+        ],
+      },
+      {
+        test: /\.ts(x?)$/,
+        use: [
+          {
+            loader: "babel-loader",
+          },
+          {
             loader: "ts-loader",
+            options: {
+              transpileOnly: true,
+              allowTsInNodeModules: true,
+            },
           },
         ],
       },
       {
         test: /\.(png|jpg|woff|woff2|svg|eot|ttf|gif|svg)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules[\/|\\]core-js/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    useBuiltIns: "entry",
-                    corejs: 3,
-                  },
-                ],
-                ["@babel/preset-react"],
-              ],
-            },
-          },
-        ],
       },
     ],
   },
