@@ -1,7 +1,7 @@
 {
   "name": "components-react-example",
   "version": "1.0.1",
-  "description": "",
+  "description": "Example usages of @wayke-se/components-react. Both webpack and esbuild",
   "main": "index.js",
   "author": "Ourstudio",
   "license": "ISC",
@@ -12,22 +12,25 @@
     "start:ts": "webpack serve --config webpack.server.typescript.js --progress --profile --color --mode development",
     "start-path:ts": "webpack serve --config webpack.server-path.typescript.js --progress --profile --color --mode development",
     "start-path:js": "webpack serve --config webpack.server-path.javascript.js --progress --profile --color --mode development",
+    "start:esbuild": "node ./esbuild/start.js",
+    "start:esbuild-esm": "node ./esbuild/start.js",
     "start": "http-server ./build -p 5000"
   },
   "dependencies": {
-    "@babel/preset-react": "^7.18.6",
     "@wayke-se/components-react": "^3.0.0-beta.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "dotenv": "^16.0.2",
+    "esbuild": "^0.15.7",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "http-server": "^14.0.0",

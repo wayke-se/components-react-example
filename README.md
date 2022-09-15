@@ -54,22 +54,32 @@ npm start
 For development purpose one can use one of the following samples below.
 This will start the build process in watch mode with HRM (Hot Module Replacement)
 
-1. Example showing the `WaykeComponent` with hash routing (default route option), javascript.
+1. Webpack example showing the `WaykeComponent` with hash routing (default route option), javascript.
 ```bash
 npm run start:js
 ```
 
-2. Example showing the `WaykeComponent` with hash routing (default route option), typescript.
+2. Webpack example showing the `WaykeComponent` with hash routing (default route option), typescript.
 ```bash
 npm run start:ts
 ```
 
-3. Example showing the `WaykeComponent` with path routing, javascript.
+1. Esbuild example showing the `WaykeComponent` with hash routing (default route option), javascript.
+```bash
+npm run start:esbuild
+```
+
+2. Esbuild example showing the `WaykeComponent` with hash routing (default route option), typescript.
+```bash
+npm run start:esbuild-esm
+```
+
+3. Webpack example showing the `WaykeComponent` with path routing, javascript.
 ```bash
 npm run start-path:js
 ```
 
-4. Example showing the `WaykeComponent` with path routing, typescript.
+4. Webpack example showing the `WaykeComponent` with path routing, typescript.
 ```bash
 npm run start-path:ts
 ```
