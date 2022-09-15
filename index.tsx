@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import "./theme.css";
 import "./ecom.css"; // Optional Ecom CSS for custom styling
@@ -19,11 +19,11 @@ const settings: WaykeCompositeWithProviderProps = {
     modifyDocumentTitleSearch: "Wayke - Components React Example",
   },
   provider: {
-    graphQlUrl: process.env.WAYKE_GRAPH_QL_URL,
-    url: process.env.WAYKE_SEARCH_URL,
+    graphQlUrl: process.env.WAYKE_GRAPH_QL_URL as string,
+    url: process.env.WAYKE_SEARCH_URL as string,
     urlMlt: process.env.WAYKE_SEARCH_MLT_URL,
     ecomSettings: {
-      url: process.env.WAYKE_ECOM_URL,
+      url: process.env.WAYKE_ECOM_URL as string,
       useBankId: true,
       serviceLogotypeUrl: "https://cdn.wayke.se/wui/images/ecom/wayke-logo.svg",
     },
@@ -33,7 +33,6 @@ const settings: WaykeCompositeWithProviderProps = {
   },
 };
 
-ReactDOM.render(
-  <WaykeComposite {...settings} />,
-  document.getElementById("react-components")
-);
+const container = document.getElementById("react-components");
+const root = createRoot(container!);
+root.render(<WaykeComposite {...settings} />);

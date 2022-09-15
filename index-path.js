@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import "./theme.css";
 import "./ecom.css"; // Optional Ecom CSS for custom styling
@@ -31,7 +31,7 @@ const settings = {
   },
 };
 
-ReactDOM.render(
-  <WaykeComposite {...settings} />,
-  document.getElementById("react-components")
-);
+
+const container = document.getElementById("react-components");
+const root = createRoot(container);
+root.render(<WaykeComposite {...settings} />);
