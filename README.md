@@ -64,22 +64,17 @@ npm run start:js
 npm run start:ts
 ```
 
-1. Esbuild example showing the `WaykeComponent` with hash routing (default route option), javascript.
+3. Esbuild example showing the `WaykeComponent` with hash routing (default route option), javascript.
 ```bash
 npm run start:esbuild
 ```
 
-2. Esbuild example showing the `WaykeComponent` with hash routing (default route option), typescript.
-```bash
-npm run start:esbuild-esm
-```
-
-3. Webpack example showing the `WaykeComponent` with path routing, javascript.
+4. Webpack example showing the `WaykeComponent` with path routing, javascript.
 ```bash
 npm run start-path:js
 ```
 
-4. Webpack example showing the `WaykeComponent` with path routing, typescript.
+5. Webpack example showing the `WaykeComponent` with path routing, typescript.
 ```bash
 npm run start-path:ts
 ```
