@@ -2,11 +2,12 @@ const config = require('./common');
 
 require('esbuild').serve(
   {
-    servedir: 'wwwesm',
+    servedir: 'www',
     port: 5000,
   },
   Object.assign(config, {
     entryPoints: ['index.tsx'],
-    outdir: 'wwwesm',
+    format: 'esm',
+    outdir: 'www',
   })
 );
