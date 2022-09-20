@@ -2,7 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 
 import "./theme.css";
-import "./ecom.css"; // Optional Ecom CSS for custom styling
+import "@wayke-se/ecom-web/dist/index.css";
 
 import WaykeComposite, { WaykePubSub } from "@wayke-se/components-react";
 
