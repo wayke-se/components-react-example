@@ -1,7 +1,7 @@
-require('dotenv').config();
+require("dotenv").config();
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   devtool: "source-map",
@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "[name].bundle.js",
-    publicPath: '/'
+    publicPath: "/",
   },
   resolve: {
     extensions: [".js"],
@@ -20,9 +20,16 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: "./index.html",
     }),
-    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /sv/),
+    new HtmlWebpackPlugin({
+      filename: 'first-level/index',
+      template: "./first-level/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'first-level/second-level.html',
+      template: "./first-level/second-level.html",
+    }),
     new webpack.DefinePlugin({
       "process.env": {
         WAYKE_SEARCH_URL: `"${process.env.WAYKE_SEARCH_URL}"`,
@@ -38,14 +45,11 @@ module.exports = {
     rules: [
       {
         test: /\.m?js$/,
-        exclude: /node_modules\/(?!(([^\/]+?\/){1,2}(src|es6)))/,
         use: [
           {
             loader: "babel-loader",
             options: {
-              presets: [
-                ["@babel/preset-react"],
-              ],
+              presets: [["@babel/preset-react"]],
             },
           },
         ],
@@ -56,7 +60,7 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|woff|woff2|svg|eot|ttf|gif|svg)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
   },

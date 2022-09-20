@@ -21,7 +21,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./index.html",
     }),
-    new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /sv/),
+    new HtmlWebpackPlugin({
+      filename: 'first-level/index',
+      template: "./first-level/index.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'first-level/second-level.html',
+      template: "./first-level/second-level.html",
+    }),
     new webpack.DefinePlugin({
       "process.env": {
         WAYKE_SEARCH_URL: `"${process.env.WAYKE_SEARCH_URL}"`,
@@ -37,7 +44,6 @@ module.exports = {
     rules: [
       {
         test: /\.m?js$/,
-        exclude: /node_modules\/(?!(([^\/]+?\/){1,2}(src|es6)))/,
         use: [
           {
             loader: "babel-loader",
